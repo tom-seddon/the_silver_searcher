@@ -108,7 +108,7 @@ struct dirent *readdir(DIR *dir)
             result         = &dir->result;
             result->d_name = dir->info.name;
 #ifdef HAVE_DIRENT_DTYPE
-			result->d_type = dir->info.attrib & _A_SUBDIR ? DT_DIR : DT_REG;
+            result->d_type = dir->info.attrib & _A_SUBDIR ? DT_DIR : DT_REG;
 #endif
         }
     }
