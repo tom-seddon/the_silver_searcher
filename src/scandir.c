@@ -45,7 +45,7 @@ int ag_scandir(const char *dirname,
         char *s = (char*)d + sizeof(struct dirent);
         d->d_name = s;
 #ifdef HAVE_DIRENT_DTYPE
-		d->d_type = entry->d_type;
+        d->d_type = entry->d_type;
 #endif
         memcpy(s, entry->d_name, s_len);
 #else
